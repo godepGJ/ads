@@ -1,0 +1,101 @@
+{
+	"config" : {
+		"dev_url" : "https://play.google.com/store/apps/developer?id=Addons+Mods+MCPE",
+		"mediafire" : [ "a#downloadButton", "a.input.popsok" ],
+		"ad_config" : {
+			"admob" : {
+				"interstitial_id" : "ca-app-pub-6878882590884328/4228040184",
+				"native_id" : "ca-app-pub-6878882590884328/8769349603",
+				"app_open_id" : "ca-app-pub-6878882590884328/7052943251",
+				"rewarded_id" : "ca-app-pub-6878882590884328/1601876849"
+			},
+			"applovin_max" : {
+				"interstitial_id" : "4b751e32a7a470bf",
+				"native_id" : "c8dfe8d5c7228ce6",
+				"app_open_id" : "ebe8ef192125a325",
+				"rewarded_id" : "e41e8d13cc4c06f6"
+			},
+			"applovin" : false,
+			"iron_source" : {
+				"app_id" : "",
+				"interstitial_id" : "",
+				"rewarded_id" : ""
+			}
+		}
+	},
+	"content" : [
+		{
+			"title" : "Morphing Bracelet",
+			"poster" : "https://www.9minecraft.net/wp-content/uploads/2022/08/Logo-Morphing-Bracelet-Addon.jpg",
+			"description" : "Morphing Bracelet is a brand new item that allows players to morph into several mobs! Do you want to be a creeper and explode your friend's house? Well, now you can! With this addon, you can start your journey and collect as many morphs as you can!\r\n\r\nMorphing Bracelet\r\nMorphing Bracelet gives players the ability to morph into different mobs. Simply kill a mob while keeping a bracelet in your inventory to collect it and morph into it. To craft this item, you need four soul soil blocks and one soul glass block.\r\n\r\nTo get the Soul Glass block, smelt a soul sand in a furnace.\r\n\r\nMorphing Bracelets have durability, and every time you morph into a mob, it uses up the durability of your bracelet. To repair it, hold your bracelet and stand on top of a soul sand or soul soil to harness its energy.\r\n\r\nScroll of Souls\r\nAn item that can copy and store morphs from your bracelet as separate items. It allows you to share mobs that you have collected with other players. The recipe for the item is shapeless and requires one paper and one soul glass.\r\n\r\nAvailable Mobs:\r\nAllay\r\n Visually glows in the dark and has the ability to fly in survival mode.\r\n\r\nAxolotl\r\n Comes in five different types. Can breathe underwater but slowly suffocates out of water.\r\n\r\nBat\r\n Can see in the dark and has the ability to fly in survival mode.\r\n\r\nBee\r\n Has the ability to fly in survival mode. Can sting and poison other mobs.\r\n\r\nBlaze\r\n Shoots fireballs and takes damage upon contact with water. Can also fly in survival mode.\r\n\r\nCat\r\n Takes no fall damage and scares away any creepers and phantoms. Comes in eleven different breeds.\r\n\r\nCave Spider\r\n Can climb walls and poisons other mobs.\r\n\r\nChicken\r\n Falls slowly and takes no fall damage.\r\n\r\nCod\r\n Can breathe underwater and suffocates on land.\r\n\r\nCow\r\n Can be milked by other players.\r\n\r\nCreeper\r\n Ignites when sneaking. Transforms into a charged creeper when struck by lightning.\r\n\r\nDolphin\r\n Swims faster underwater. Unlike other aquatic mobs, they can't survive without getting air every once in a while.\r\n\r\nDrowned\r\n Can breathe underwater and burns in daylight.\r\n\r\nElder Guardian\r\n Can curse nearby players with mining fatigue. Inflicts damage similarly to the Thorns enchantment when its spikes are out.\r\n\r\nEnderman\r\n Takes damage upon contact with water and has the ability to teleport.\r\n\r\nEndermite\r\n Endermen attack you without provocation. Doesn't take damage upon contact with water, unlike endermen.\r\n\r\nEvoker\r\n Spell-casting illager that can summon fangs. Currently lacks the ability to summon vexes yet.\r\n\r\nFox\r\n Immune to sweet berry bushes. Can pounce by holding the sneak button.\r\n\r\nFrog\r\n Can jump higher by sneaking and has a reduced fall damage. Comes in three biome-dependent types.\r\n\r\nGhast\r\n Has the ability to fly and shoot fireballs. And is resistant to fire damage.\r\n\r\nGlow Squid\r\n Breathes underwater and suffocates on land. Glows visually in the dark.\r\n\r\nGoat\r\n Has a reduced fall damage. Can jump higher by holding the sneak button.\r\n\r\nGuardian\r\n Inflicts damage similarly to the Thorns enchantment when its spikes are out. Breathes both water and air.\r\n\r\nHoglin\r\n Has a knockback resistance of 50% and transforms into a zoglin outside the Nether.\r\n\r\nHusk\r\n A different type of zombie that doesn't burn in daylight and are taller.\r\n\r\nIron Golem\r\n Moves slower but has a lot of health. Can yeet mobs and is resistant to knockback.\r\n\r\nLlama\r\n Can spit at other mobs and can be ridden by players. Comes in four different types.\r\n\r\nMagma Cube\r\n Jumps higher and splits into smaller magma cubes upon death. Continuously damage mobs they collide with and doesn't take any fall damage.\r\n\r\nMooshroom\r\n Provides mushroom stews when milked with a bowl. Turns into a brown mooshroom or vice versa upon lightning strike.\r\n\r\nOcelot\r\n Runs very fast and is immune to fall damage. Scares away any creepers and phantoms and is larger in size compared to cats.\r\n\r\nPanda\r\n Comes with various personalities, each featuring unique traits.\r\n\r\nParrot\r\n Can fly in survival mode and comes in five different types.\r\n\r\nPhantom\r\n Has the ability to fly and burns under daylight.\r\n\r\nPig\r\n Can be ridden by players when equipped with a saddle.\r\n\r\nPiglin\r\n Carries a golden sword and transforms into a zombified piglin outside the Nether.\r\n\r\nPiglin Brute\r\n A stronger variant of the piglin, wielding a golden axe instead of a golden sword.\r\n\r\nPillager\r\n Equipped with a crossbow that shoots infinite arrows.\r\n\r\nPolar Bear\r\n Doesn't take freezing damage from powder snow.\r\n\r\nPufferfish\r\n Breathes underwater but suffocates on land. Inflates when there's a threat nearby, dealing damage and inflicting poison on it.\r\n\r\nRabbit\r\n Moves faster on land and comes in seven different breeds.\r\n\r\nRavager\r\n Has a lot of health and a knockback resistance of 75%.\r\n\r\nSalmon\r\n Breathes underwater but suffocates on land. Comes in three different sizes.\r\n\r\nSheep\r\n Comes in sixteen different colors. Eats grass when sneaking on a grass block.\r\n\r\nShulker\r\n A block-shaped mob that's locked in place. Can protect itself by closing its shell.\r\n\r\nSilverfish\r\n Currently lacks the ability to infest stone blocks.\r\n\r\nSkeleton\r\n Has a bow that can shoot arrows infinitely and burns in daylight.\r\n\r\nSlime\r\n Splits into smaller slimes upon death and continuously damage mobs they collide with.\r\n\r\nSniffer\r\n A large ancient mob that moves slower and is heavier.\r\n\r\nSnow Golem\r\n Creates snow trails and can throw infinite snowballs. Melts in contact with water or a hot environment.\r\n\r\nSpider\r\n Can climb walls.\r\n\r\nSquid\r\n Can breathe underwater and suffocates on land.\r\n\r\nStray\r\n Equipped with a bow that shoots arrows infinitely and is immune to freezing.\r\n\r\nStrider\r\n Has the ability to walk on lava and is resistant to fire damage. Can be ridden by players when saddled.\r\n\r\nTadpole\r\n The smallest mob in Minecraft. Breathes underwater but suffocates on land.\r\n\r\nTrader Llama\r\n Can spit at other mobs and can be ridden by players. Wears a different type of clothing.\r\n\r\nTropical Fish\r\n Can breathe underwater but suffocates on land. Comes with various species, like clownfish.\r\n\r\nTurtle\r\n Moves slower on land but faster underwater. Breathes both air and water.\r\n\r\nVex\r\n Can fly in survival mode and wields an iron sword. Currently can't phase through walls.\r\n\r\nVillager\r\n Comes in seven different biome outfits and tranforms into a zombie villager when killed by a zombie.\r\n\r\nVindicator\r\n Wields an iron axe that deals a lot of damage.\r\n\r\nWandering Trader\r\n A villager wearing different clothing.\r\n\r\nWarden\r\n Has a lot of health and deals a lot of damage. Has a foggy vision and shoots sonic explosions.\r\n\r\nWitch\r\n Currently doesn't have the ability to throw potions.\r\n\r\nWither\r\n A boss mob with a lot of health. Can shoot wither skulls at mobs.\r\n\r\nWither Skeleton\r\n Inflicts other mobs with a wither effect and is immune to lava.\r\n\r\nWolf\r\n Can be tamed with a bone by other players. The tail indicates the amount of health it has.\r\n\r\nZoglin\r\n A zombified variant of the hoglin that's immune to fire damage.\r\n\r\nZombie\r\n Burns under daylight and can infect villagers it kills. Has a baby variant that can run very fast.\r\n\r\nZombie Villager\r\n Burns under daylight. Can be cured into a villager with a golden apple.\r\n\r\nZombified Piglin\r\n Carries a golden sword and is immune to fire damage.\r\n\r\nKnown Issues\r\nBaby sheep that are spawned by breeding or by commands will always show up as white sheep in the menu. The only way you can get other colors is by killing a sheep that spawned naturally or spawned by spawn eggs (MORPH-14)\r\n\r\nThe addon is still in the alpha phase, which means it is not yet complete. More mobs coming soon, Enjoy!\r\n\r\nNote: This addon is not compatible with any other addons that modify the player code\r\n\r\nMorphing Bracelet by CookieDookie\r\n[Youtube||https://www.youtube.com/@CookieDookie145] | [Twitter||https://twitter.com/CookieDookie145]\r\n\r\n[WATCH Videos||https://www.youtube.com/watch?v=41v2beMl9JI]\r\n\r\nChangelog\r\n0.1.7 Hotfix (1.20.50)\r\n\r\n* Updated to 1.20.50!\r\n* Bat model has been updated\r\n* API has been updated to version 1.8.0-beta\r\n \r\nGameplay Changes\r\n* The morph menu has been tweaked\r\n* Morph names in the morph menu has been removed\r\n* Exploding as a creeper now kills you instead of teleporting you back to spawn\r\n* When exploding, death can now be prevented again with a totem of undying\r\n* Wither's dangerous wither skull item has been renamed to \"Blue Wither Skull\"\r\n* Eating a cookie as a parrot in creative mode now doesn't inflict poison anymore\r\n \r\n\r\nBug Fixes\r\n* Fixed a bug where the creeper's explosion ability starts creating multiple explosions instead of just once\r\n\r\nInstallation Requirements\r\n* Turn on all experimental toggles in the Add-on Creators section for the addon to work.\r\n* Turn on the EDUCATION EDITION toggle to be able to fly as a mob that has the ability to fly.",
+			"downloads" : [
+				{
+					"title" : "v0.1.7",
+					"desc" : "MCPE 1.20.50",
+					"link" : "https://godepgj.github.io/mcaddon/Morphing_Bracelet_v0.1.7_1.20.50.mcaddon",
+					"filename" : "Morphing_Bracelet_v0.1.7_1.20.50.mcaddon",
+					"filesize" : 1376904,
+					"md5" : "d6e761f7e6b5c2a9ec5df6a6e7675590"
+				},
+				{
+					"title" : "v0.1.5",
+					"desc" : "MCPE 1.20.40",
+					"link" : "https://godepgj.github.io/mcaddon/Morphing_Bracelet_v0.1.5_1.20.40.mcaddon",
+					"filename" : "Morphing_Bracelet_v0.1.5_1.20.40.mcaddon",
+					"filesize" : 1244472,
+					"md5" : "4c657009281b59974deb69e46af1510c"
+				},
+				{
+					"title" : "v0.1.3",
+					"desc" : "MCPE 1.20.0",
+					"link" : "https://godepgj.github.io/mcaddon/Morphing_Bracelet_v0.1.3_1.20.mcaddon",
+					"filename" : "Morphing_Bracelet_v0.1.3_1.20.mcaddon",
+					"filesize" : 1225616,
+					"md5" : "b8a13c3d98f415c00612085cf548d08f"
+				},
+				{
+					"title" : "v0.1.1",
+					"desc" : "MCPE 1.19.30",
+					"link" : "https://godepgj.github.io/mcaddon/Morphing_Bracelet_v0.1.1_1.19.30.mcaddon",
+					"filename" : "Morphing_Bracelet_v0.1.1_1.19.30.mcaddon",
+					"filesize" : 1081556,
+					"md5" : "b8f6a2647f658b659351d028af53c1d8"
+				},
+				{
+					"title" : "v0.1.0",
+					"desc" : "MCPE 1.19.10",
+					"link" : "https://godepgj.github.io/mcaddon/Morphing_Bracelet_v0.1.0_1.19.10.mcaddon",
+					"filename" : "Morphing_Bracelet_v0.1.0_1.19.10.mcaddon",
+					"filesize" : 1093996,
+					"md5" : "b7a444e1a2c262f550f28ca908ed56e6"
+				},
+				{
+					"title" : "v0.0.10",
+					"desc" : "MCPE 1.18.10",
+					"link" : "https://godepgj.github.io/mcaddon/Morph_Bracelet_v0.0.10_1.18.10.mcaddon",
+					"filename" : "Morphing_Bracelet_v0.1.0_1.19.10.mcaddon",
+					"filesize" : 639398,
+					"md5" : "950a3823da2f9580bd32a22d20d67267"
+				}
+			],
+			"images" : [
+				"https://api.mcpedl.com/storage/submissions/158645/images/morphing-bracelet-alpha_2.png",
+				"https://www.9minecraft.net/wp-content/uploads/2022/08/2-Morphing-Bracelet-Addon.jpg",
+				"https://www.9minecraft.net/wp-content/uploads/2022/08/3-Morphing-Bracelet-Addon.jpg",
+				"https://www.9minecraft.net/wp-content/uploads/2022/08/4-Morphing-Bracelet-Addon.jpg",
+				"https://www.9minecraft.net/wp-content/uploads/2022/08/5-Morphing-Bracelet-Addon.jpg"
+			],
+			"type" : "content"
+		},
+		{
+			"title" : "[AD] The Lost World Dinosaur Mod",
+			"poster" : "https://play-lh.googleusercontent.com/3Y86ID_tcw4yIIu1waPZ8WewlD84949u6fa2DIlnV4t-nIVJj7wFjVZr-LJf2f1CL8w",
+			"url" : "https://play.google.com/store/apps/details?id=com.thelostworldjurassicpark.dinosaurmodminecraft",
+			"type" : "ad_content"
+		},
+		{
+			"type" : "more",
+			"url" : "https://play.google.com/store/apps/developer?id=Addons+Mods+MCPE"
+		}
+	]
+}
