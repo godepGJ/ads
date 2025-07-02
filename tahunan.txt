@@ -1,0 +1,1083 @@
+<div class="kt-portlet__body">
+            <ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-warning" role="tablist">
+                <li class="nav-item">
+                    <a id="tab_bupottahunan" class="nav-link active" data-toggle="tab" href="#kt_portlet_bp21_thn" role="tab">
+                        <i class="la la-bookmark"></i> <strong>Tahunan A1</strong>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!--TAHUNAN-->
+                <div class="tab-pane active" id="kt_portlet_bp21_thn" role="tabpanel">
+                    <div class="kt-section">
+                        <div class="kt-section__content">
+                            <input type="hidden" id="noBupot">
+                            <input type="hidden" id="revNo">
+                            <form id="formBp21Tahunan" novalidate="novalidate">
+                                <div class="kt-section">
+                                    <div class="kt-divider" style="margin-bottom: 10px;">
+                                        <span></span>
+                                        <span>
+                                            <span class="kt-badge kt-badge--warning kt-badge--inline kt-badge--xl kt-badge--rounded"><strong>TAHUNAN A1</strong></span>
+                                        </span>
+                                        <span></span>
+                                    </div>
+
+                                    <div id="div-tahunan" class="kt-section__content" style="padding: 0px 15px">
+                                        <!--IDENTITAS PENERIMA PENGHASILAN YANG DIPOTONG-->
+                                        <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">IDENTITAS PENERIMA PENGHASILAN YANG DIPOTONG</span>
+                                        <div class="kt-separator kt-separator--space-sm kt-separator--border-solid"></div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-4 pl-4">Identitas</label>
+                                                    <div class="col-md-8">
+                                                        <div class="kt-radio-inline">
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="optIdentitas1" type="radio" name="optIdentitas" value="0">
+                                                                NPWP/NITKU
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="optIdentitas2" type="radio" name="optIdentitas" value="1">
+                                                                NIK
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <div class="col-md-12">
+                                                        <div id="div-npwp" class="row" style="">
+                                                            <label class="col-form-label col-md-4 pl-4" for="npwp">NPWP/NITKU</label>
+                                                            <div class="col-md-6">
+                                                                <div class="kt-input-icon kt-input-icon--right">
+                                                                    <input id="npwp" type="text" class="form-control npwp" autocomplete="off" name="npwp" placeholder="" maxlength="22" im-insert="true">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 d-flex justify-content-center">
+                                                                <button id="btnCekNpwp" type="button" class="btn btn-sm btn-djp btn-elevate btn-pill">
+                                                                    Cek
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div id="div-nik" class="row" style="display: none">
+                                                            <label class="col-form-label col-md-4 pl-4" for="nik">NIK</label>
+                                                            <div class="col-md-8">
+                                                                <div class="kt-input-icon kt-input-icon--right">
+                                                                    <input id="nik" type="text" class="form-control nik" autocomplete="off" name="nik" placeholder="" maxlength="16" im-insert="true">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-4 pl-4">Nama</label>
+                                                    <div class="col-md-8">
+                                                        <div class="kt-input-icon kt-input-icon--right">
+                                                            <input readonly="" id="namaDipotong" type="text" class="form-control" autocomplete="off" style="text-transform:uppercase" name="namaDipotong">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-4 pl-4">Alamat</label>
+                                                    <div class="col-md-8">
+                                                        <div class="kt-input-icon kt-input-icon--right">
+                                                            <input readonly="" id="almtDipotong" type="text" class="form-control" name="almtDipotong" autocomplete="off" style="text-transform:uppercase">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row" id="div-cek-nik" style="display: none">
+                                                    <label class="col-form-label col-md-4 pl-4"></label>
+                                                    <div class="col-md-3 pl-4">
+                                                        <button id="btnCekNik" type="button" class="btn btn-sm btn-djp btn-elevate btn-pill">
+                                                            <i class="fa fa-search"></i> Cek
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-md-1 d-flex justify-content-center">
+                                                        <span class="kt-switch kt-switch--sm kt-switch--icon">
+                                                            <label>
+                                                                <input id="optNikCb" type="checkbox" name="" disabled="">
+                                                                    <span></span>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                    <label class="col-form-label col-md-4 label-validasi-nik" style="padding-left: 0rem !important;"> Tidak Valid</label>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-4 pl-4">Jenis Kelamin</label>
+                                                    <div class="col-md-8">
+                                                        <div class="kt-radio-inline" data-error-container="#optJnsKelamin-error">
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="optJnsKelamin1" type="radio" name="optJnsKelamin" value="0" checked="">
+                                                                Laki - laki
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="optJnsKelamin2" type="radio" name="optJnsKelamin" value="1">
+                                                                Perempuan
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div id="optJnsKelamin-error"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-8 pl-4">Status/Jumlah Tanggungan Keluarga untuk PTKP</label>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group select2-container-djp mb-0">
+                                                            <select data-placeholder="Pilih PTKP" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="statusPtkp" name="statusPtkp" data-select2-id="statusPtkp" tabindex="-1" aria-hidden="true">
+                                                                <option data-select2-id="2"></option>
+                                                                <option value="TK/0" data-foo="54000000">TK/0</option>
+                                                                <option value="TK/1" data-foo="58500000">TK/1</option>
+                                                                <option value="TK/2" data-foo="63000000">TK/2</option>
+                                                                <option value="TK/3" data-foo="67500000">TK/3</option>
+                                                                <option value="K/0" data-foo="58500000">K/0</option>
+                                                                <option value="K/1" data-foo="63000000">K/1</option>
+                                                                <option value="K/2" data-foo="67500000">K/2</option>
+                                                                <option value="K/3" data-foo="72000000">K/3</option>
+                                                                <option value="HB/0" data-foo="112500000">HB/0</option>
+                                                                <option value="HB/1" data-foo="117000000">HB/1</option>
+                                                                <option value="HB/2" data-foo="121500000">HB/2</option>
+                                                                <option value="HB/3" data-foo="126000000">HB/3</option>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 153.317px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-statusPtkp-container"><span class="select2-selection__rendered" id="select2-statusPtkp-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Pilih PTKP</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-4 pl-4">Nama Jabatan</label>
+                                                    <div class="col-md-8">
+                                                        <input id="namaJabatan" type="text" class="form-control" autocomplete="off" style="text-transform:uppercase" name="namaJabatan">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-5 pl-4">Status Karyawan Asing</label>
+                                                    <div class="col-md-7">
+                                                        <span class="kt-switch kt-switch--sm kt-switch--icon">
+                                                        <label>
+                                                            <input id="fgKaryawanAsing" type="checkbox" name="">
+                                                                <span></span>
+                                                        </label>
+                                                    </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-4 pl-4">Kode Negara Domisili</label>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group select2-container-djp mb-0">
+                                                            <select data-placeholder="Pilih Kode Negara" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="negara" name="negara" data-select2-id="negara" tabindex="-1" aria-hidden="true" disabled="">
+                                                                <option data-select2-id="4"></option>
+                                                                <option value="AFG">(AFG) - Afghanistan</option>
+                                                                <option value="ALB">(ALB) - Albania</option>
+                                                                <option value="DSA">(DSA) - Aljazair</option>
+                                                                <option value="AND">(AND) - Andorra</option>
+                                                                <option value="AGO">(AGO) - Angola</option>
+                                                                <option value="ATG">(ATG) - Antigua dan Barbuda</option>
+                                                                <option value="ARG">(ARG) - Argentina</option>
+                                                                <option value="ARM">(ARM) - Armenia</option>
+                                                                <option value="AUS">(AUS) - Australia</option>
+                                                                <option value="AUT">(AUT) - Austria</option>
+                                                                <option value="AZE">(AZE) - Azerbaijan</option>
+                                                                <option value="BHS">(BHS) - Bahamas</option>
+                                                                <option value="BHR">(BHR) - Bahrain</option>
+                                                                <option value="BGD">(BGD) - Bangladesh</option>
+                                                                <option value="BRB">(BRB) - Barbados</option>
+                                                                <option value="BLR">(BLR) - Belarus</option>
+                                                                <option value="BEL">(BEL) - Belgium</option>
+                                                                <option value="BLZ">(BLZ) - Belize</option>
+                                                                <option value="BEN">(BEN) - Benin</option>
+                                                                <option value="BTN">(BTN) - Bhutan</option>
+                                                                <option value="BOL">(BOL) - Bolivia</option>
+                                                                <option value="BIH">(BIH) - Bosnia dan Herzegovina</option>
+                                                                <option value="BWA">(BWA) - Bostwana</option>
+                                                                <option value="BRA">(BRA) - Brazil</option>
+                                                                <option value="BRN">(BRN) - Brunei Darussalam</option>
+                                                                <option value="BGR">(BGR) - Bulgaria</option>
+                                                                <option value="BFA">(BFA) - Burkina Faso</option>
+                                                                <option value="BDI">(BDI) - Burundi</option>
+                                                                <option value="CPV">(CPV) - Cabo Verde</option>
+                                                                <option value="KHM">(KHM) - Cambodia</option>
+                                                                <option value="CMR">(CMR) - Cameroon</option>
+                                                                <option value="CAN">(CAN) - Canada</option>
+                                                                <option value="CAF">(CAF) - Central African Republic</option>
+                                                                <option value="TCD">(TCD) - Chad</option>
+                                                                <option value="CHL">(CHL) - Chile</option>
+                                                                <option value="CHN">(CHN) - China</option>
+                                                                <option value="COL">(COL) - Colombia</option>
+                                                                <option value="COM">(COM) - Comoros</option>
+                                                                <option value="COG">(COG) - Congo</option>
+                                                                <option value="COD">(COD) - Congo - the Democratic Republic of the</option>
+                                                                <option value="CRI">(CRI) - Costa Rica</option>
+                                                                <option value="HRV">(HRV) - Croatia</option>
+                                                                <option value="CUB">(CUB) - Cuba</option>
+                                                                <option value="CYP">(CYP) - Cyprus</option>
+                                                                <option value="DNK">(DNK) - Denmark</option>
+                                                                <option value="DJI">(DJI) - Djibouti</option>
+                                                                <option value="DMA">(DMA) - Dominica</option>
+                                                                <option value="DOM">(DOM) - Dominican Republic</option>
+                                                                <option value="EGY">(EGY) - Egypt</option>
+                                                                <option value="ECU">(ECU) - Ekuador</option>
+                                                                <option value="SLV">(SLV) - El Salvador</option>
+                                                                <option value="GNQ">(GNQ) - Equatorial Guinea</option>
+                                                                <option value="ERI">(ERI) - Eritrea</option>
+                                                                <option value="EST">(EST) - Estonia</option>
+                                                                <option value="ETH">(ETH) - Ethiopia</option>
+                                                                <option value="FJI">(FJI) - Fiji</option>
+                                                                <option value="FIN">(FIN) - Finlandia</option>
+                                                                <option value="FRA">(FRA) - France</option>
+                                                                <option value="GAB">(GAB) - Gabon</option>
+                                                                <option value="GMB">(GMB) - Gambia</option>
+                                                                <option value="GEO">(GEO) - Georgia</option>
+                                                                <option value="DEU">(DEU) - Germany</option>
+                                                                <option value="GHA">(GHA) - Ghana</option>
+                                                                <option value="GRC">(GRC) - Greece</option>
+                                                                <option value="GRD">(GRD) - Grenada</option>
+                                                                <option value="GTM">(GTM) - Guatemala</option>
+                                                                <option value="GIN">(GIN) - Guinea</option>
+                                                                <option value="GNB">(GNB) - Guinea-Bissau</option>
+                                                                <option value="GUY">(GUY) - Guyana</option>
+                                                                <option value="HTI">(HTI) - Haiti</option>
+                                                                <option value="HND">(HND) - Honduras</option>
+                                                                <option value="HKG">(HKG) - Hong Kong</option>
+                                                                <option value="HUN">(HUN) - Hungary</option>
+                                                                <option value="ISL">(ISL) - Iceland</option>
+                                                                <option value="IND">(IND) - India</option>
+                                                                <option value="IRN">(IRN) - Iran</option>
+                                                                <option value="IRQ">(IRQ) - Iraq</option>
+                                                                <option value="IRL">(IRL) - Irlandia</option>
+                                                                <option value="ISR">(ISR) - Israel</option>
+                                                                <option value="ITA">(ITA) - Italy</option>
+                                                                <option value="JAM">(JAM) - Jamaica</option>
+                                                                <option value="JPN">(JPN) - Japan</option>
+                                                                <option value="JOR">(JOR) - Jordan</option>
+                                                                <option value="KAZ">(KAZ) - Kazakhstan</option>
+                                                                <option value="KEN">(KEN) - Kenya</option>
+                                                                <option value="KIR">(KIR) - Kiribati</option>
+                                                                <option value="KOR">(KOR) - Korea, Republic of</option>
+                                                                <option value="KWT">(KWT) - Kuwait</option>
+                                                                <option value="KGZ">(KGZ) - Kyrgyzstan</option>
+                                                                <option value="LAO">(LAO) - Laos</option>
+                                                                <option value="LVA">(LVA) - Latvia</option>
+                                                                <option value="LBN">(LBN) - Lebanon</option>
+                                                                <option value="LSO">(LSO) - Lesotho</option>
+                                                                <option value="LBR">(LBR) - Liberia</option>
+                                                                <option value="LBY">(LBY) - Libya</option>
+                                                                <option value="LIE">(LIE) - Liechtenstein</option>
+                                                                <option value="LTU">(LTU) - Lituania</option>
+                                                                <option value="LUX">(LUX) - Luxembourg</option>
+                                                                <option value="MKD">(MKD) - Macedonia</option>
+                                                                <option value="MDG">(MDG) - Madagascar</option>
+                                                                <option value="MWI">(MWI) - Malawi</option>
+                                                                <option value="MYS">(MYS) - Malaysia</option>
+                                                                <option value="MDV">(MDV) - Maldives</option>
+                                                                <option value="MLI">(MLI) - Mali</option>
+                                                                <option value="MLT">(MLT) - Malta</option>
+                                                                <option value="MHL">(MHL) - Marshall Islands</option>
+                                                                <option value="MRT">(MRT) - Mauritania</option>
+                                                                <option value="MUS">(MUS) - Mauritius</option>
+                                                                <option value="MEX">(MEX) - Mexico</option>
+                                                                <option value="FSM">(FSM) - Micronesia</option>
+                                                                <option value="MDA">(MDA) - Moldova, Republic of</option>
+                                                                <option value="MCO">(MCO) - Monaco</option>
+                                                                <option value="MNG">(MNG) - Mongolia</option>
+                                                                <option value="MNE">(MNE) - Montenegro</option>
+                                                                <option value="MAR">(MAR) - Morocco</option>
+                                                                <option value="MOZ">(MOZ) - Mozambique</option>
+                                                                <option value="MMR">(MMR) - Myanmar</option>
+                                                                <option value="NAM">(NAM) - Namibia</option>
+                                                                <option value="NRU">(NRU) - Nauru</option>
+                                                                <option value="NPL">(NPL) - Nepal</option>
+                                                                <option value="NLD">(NLD) - Netherlands</option>
+                                                                <option value="NZL">(NZL) - New Zealand</option>
+                                                                <option value="NIC">(NIC) - Nicaragua</option>
+                                                                <option value="NER">(NER) - Niger</option>
+                                                                <option value="NGA">(NGA) - Nigeria</option>
+                                                                <option value="PRK">(PRK) - North Korea</option>
+                                                                <option value="NOR">(NOR) - Norway</option>
+                                                                <option value="OMN">(OMN) - Oman</option>
+                                                                <option value="PAK">(PAK) - Pakistan</option>
+                                                                <option value="PLW">(PLW) - Palau</option>
+                                                                <option value="PSE">(PSE) - Palestine, State Of</option>
+                                                                <option value="PAN">(PAN) - Panama</option>
+                                                                <option value="CIV">(CIV) - Pantai Gading</option>
+                                                                <option value="PNG">(PNG) - Papua New Guinea</option>
+                                                                <option value="PRY">(PRY) - Paraguay</option>
+                                                                <option value="PER">(PER) - Peru</option>
+                                                                <option value="PHL">(PHL) - Philippines</option>
+                                                                <option value="POL">(POL) - Poland</option>
+                                                                <option value="PRT">(PRT) - Portugal</option>
+                                                                <option value="QAT">(QAT) - Qatar</option>
+                                                                <option value="CZE">(CZE) - Republik Ceko</option>
+                                                                <option value="ROU">(ROU) - Romania</option>
+                                                                <option value="RUS">(RUS) - Russian Federation</option>
+                                                                <option value="RWA">(RWA) - Rwanda</option>
+                                                                <option value="KNA">(KNA) - Saint Kitts dan Nevis</option>
+                                                                <option value="LCA">(LCA) - Saint Lucia</option>
+                                                                <option value="SPM">(SPM) - Saint Pierre and Miquelon</option>
+                                                                <option value="VCT">(VCT) - Saint Vincent dan Grenadines</option>
+                                                                <option value="WSM">(WSM) - Samoa</option>
+                                                                <option value="SMR">(SMR) - San Marino</option>
+                                                                <option value="STP">(STP) - Sao Tome dan Principe</option>
+                                                                <option value="SAU">(SAU) - Saudi Arabia</option>
+                                                                <option value="SEN">(SEN) - Senegal</option>
+                                                                <option value="SRB">(SRB) - Serbia</option>
+                                                                <option value="SYC">(SYC) - Seychelles</option>
+                                                                <option value="SLE">(SLE) - Sierra Leone</option>
+                                                                <option value="SGP">(SGP) - Singapore</option>
+                                                                <option value="SVK">(SVK) - Slovakia</option>
+                                                                <option value="SVN">(SVN) - Slovenia</option>
+                                                                <option value="SLB">(SLB) - Solomon Islands</option>
+                                                                <option value="SOM">(SOM) - Somalia</option>
+                                                                <option value="ZAF">(ZAF) - South Africa</option>
+                                                                <option value="ESP">(ESP) - Spain</option>
+                                                                <option value="LKA">(LKA) - Sri Lanka</option>
+                                                                <option value="SDN">(SDN) - Sudan</option>
+                                                                <option value="SUR">(SUR) - Suriname</option>
+                                                                <option value="SJM">(SJM) - Svalbard and Jan Mayen</option>
+                                                                <option value="SWZ">(SWZ) - Swaziland</option>
+                                                                <option value="SWE">(SWE) - Sweden</option>
+                                                                <option value="CHE">(CHE) - Switzerland</option>
+                                                                <option value="SYR">(SYR) - Syria</option>
+                                                                <option value="TWN">(TWN) - Taiwan</option>
+                                                                <option value="TJK">(TJK) - Tajikistan</option>
+                                                                <option value="TZA">(TZA) - Tanzania</option>
+                                                                <option value="THA">(THA) - Thailand</option>
+                                                                <option value="TLS">(TLS) - Timor Leste</option>
+                                                                <option value="TGO">(TGO) - Togo</option>
+                                                                <option value="TKL">(TKL) - Tokelau</option>
+                                                                <option value="TON">(TON) - Tonga</option>
+                                                                <option value="TTO">(TTO) - Trinidad dan Tobago</option>
+                                                                <option value="TUN">(TUN) - Tunisia</option>
+                                                                <option value="TUR">(TUR) - Turkey</option>
+                                                                <option value="TKM">(TKM) - Turkmenistan</option>
+                                                                <option value="TUV">(TUV) - Tuvalu</option>
+                                                                <option value="UGA">(UGA) - Uganda</option>
+                                                                <option value="UKR">(UKR) - Ukraine</option>
+                                                                <option value="ARE">(ARE) - United Arab Emirates</option>
+                                                                <option value="GBR">(GBR) - United Kingdom</option>
+                                                                <option value="USA">(USA) - United States</option>
+                                                                <option value="UMI">(UMI) - United States Minor Outlying Islands</option>
+                                                                <option value="URY">(URY) - Uruguay</option>
+                                                                <option value="UZB">(UZB) - Uzbekistan</option>
+                                                                <option value="VUT">(VUT) - Vanuatu</option>
+                                                                <option value="VAT">(VAT) - Vatican</option>
+                                                                <option value="VEN">(VEN) - Venezuela</option>
+                                                                <option value="VNM">(VNM) - Viet Nam</option>
+                                                                <option value="VGB">(VGB) - Virgin Islands, British</option>
+                                                                <option value="VIR">(VIR) - Virgin Islands, US</option>
+                                                                <option value="YEM">(YEM) - Yemen</option>
+                                                                <option value="ZMB">(ZMB) - Zambia</option>
+                                                                <option value="ZWE">(ZWE) - Zimbabwe</option>
+                                                            </select><span class="select2 select2-container select2-container--default select2-container--disabled" dir="ltr" data-select2-id="3" style="width: 326.667px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-labelledby="select2-negara-container"><span class="select2-selection__rendered" id="select2-negara-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Pilih Kode Negara</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--RINCIAN PENGHASILAN DAN PENGHITUNGAN PPh PASAL 21-->
+
+                                        <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">RINCIAN PENGHASILAN DAN PENGHITUNGAN PPh PASAL 21</span>
+                                        <div class="kt-separator kt-separator--space-sm kt-separator--border-solid"></div>
+                                        <div class="kt-section" data-select2-id="23">
+                                            <div class="kt-section__content" data-select2-id="22">
+                                                <div class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-2 pl-4">Kode Objek Pajak</label>
+                                                    <div class="col-md-3">
+                                                        <div class="kt-radio-inline" data-error-container="#kdObjPjkTahunan-error">
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="kdObjPjk1" type="radio" name="kdObjPjk" value="21-100-01" checked="">
+                                                                21-100-01
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="kdObjPjk2" type="radio" name="kdObjPjk" value="21-100-02">
+                                                                21-100-02
+                                                                <span></span>
+                                                            </label>
+                                                            <div id="kdObjPjkTahunan-error"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-7" data-select2-id="21">
+                                                        <label class="col-form-label col-md-12 pl-0">Tahun dan Masa Pajak</label>
+                                                        <div class="form-group form-group-md row" data-select2-id="20">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group select2-container-djp mb-2" data-select2-id="19">
+                                                                    <select data-placeholder="Pilih Tahun Pajak" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="thnPjk" name="thnPjk" data-select2-id="thnPjk" tabindex="-1" aria-hidden="true">
+                                                                        <option data-select2-id="6"></option>
+                                                                        <option value="2024" data-select2-id="26">2024</option>
+                                                                    </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="5" style="width: 182.217px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-thnPjk-container"><span class="select2-selection__rendered" id="select2-thnPjk-container" role="textbox" aria-readonly="true" title="2024"><span class="select2-selection__clear" data-select2-id="27">×</span>2024</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md">
+                                                                <div class="form-group select2-container-djp mb-0">
+                                                                    <select data-placeholder="Masa Awal" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="msPjkAwal" name="msPjkAwal" data-select2-id="msPjkAwal" tabindex="-1" aria-hidden="true"><option value="12" data-select2-id="28">12</option><option value="11">11</option><option value="10">10</option><option value="09">09</option><option value="08">08</option><option value="07">07</option><option value="06">06</option><option value="05">05</option><option value="04">04</option><option value="03">03</option><option value="02">02</option><option value="01" data-select2-id="32">01</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="7" style="width: 156.95px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-msPjkAwal-container"><span class="select2-selection__rendered" id="select2-msPjkAwal-container" role="textbox" aria-readonly="true" title="01"><span class="select2-selection__clear" data-select2-id="37">×</span>01</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                                </div>
+                                                            </div>
+                                                            <label class="col-form-label col-md-1">s.d.</label>
+                                                            <div class="col-md">
+                                                                <div class="form-group select2-container-djp mb-0">
+                                                                    <select data-placeholder="Masa Akhir" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="msPjkAkhir" name="msPjkAkhir" data-select2-id="msPjkAkhir" tabindex="-1" aria-hidden="true"><option value="12" data-select2-id="34">12</option><option value="11">11</option><option value="10">10</option><option value="09">09</option><option value="08">08</option><option value="07">07</option><option value="06">06</option><option value="05">05</option><option value="04">04</option><option value="03">03</option><option value="02">02</option><option value="01">01</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="9" style="width: 156.95px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-msPjkAkhir-container"><span class="select2-selection__rendered" id="select2-msPjkAkhir-container" role="textbox" aria-readonly="true" title="12"><span class="select2-selection__clear" data-select2-id="41">×</span>12</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="hitung-grossup" class="form-group form-group-md row">
+                                                    <label class="col-form-label col-md-3 pl-4">Skema Penghitungan</label>
+                                                    <div class="col-md-5">
+                                                        <div class="kt-radio-inline">
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="fgGrossUp1" type="radio" checked="" name="fgGrossUp" value="0">
+                                                                Gross
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="fgGrossUp2" type="radio" name="fgGrossUp" value="1">
+                                                                Gross Up
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="div-fasilitas">
+                                                    <div class="form-group form-group-md row">
+                                                        <label class="col-form-label col-md-3 pl-4">Fasilitas PPh Pasal 21</label>
+                                                        <div class="col-1">
+                                                    <span class="kt-switch kt-switch--sm kt-switch--icon">
+                                                        <label>
+                                                            <input id="optFasilitasCb" type="checkbox" name="">
+                                                                <span></span>
+                                                        </label>
+                                                    </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="div-opt-fasilitas" style="display: none">
+                                                        <div class="form-group form-group-md row">
+                                                            <label class="col-form-label col-md-3 pl-4"></label>
+                                                            <div class="col-md-4">
+                                                                <div class="kt-radio-inline">
+                                                                    <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                        <input id="optFasilitas1" type="radio" name="optFasilitas" value="0" checked="checked">
+                                                                        Tanpa Fasilitas
+                                                                        <span></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-group-md row" id="div-fas-dtp">
+                                                            <label class="col-form-label col-md-3 pl-4"></label>
+                                                            <div class="col-md-4">
+                                                                <div class="kt-radio-inline">
+                                                                    <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                        <input id="optFasilitas3" type="radio" name="optFasilitas" value="3">
+                                                                        DTP Ibu Kota Nusantara (IKN)
+                                                                        <span></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-5">
+                                                                <div class="kt-input-icon kt-input-icon--right">
+                                                                    <input readonly="" id="noAturanDtp" type="text" class="form-control inputFas" autocomplete="off" name="noAturanDtp" placeholder="Nomor Suket DTP">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">DATA PENGHASILAN MASA PAJAK TERAKHIR</span>
+                                                <div class="kt-separator kt-separator--space-sm kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">PENGHASILAN BRUTO</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="jmlBrutoMpt0" name="jmlBrutoMpt0" type="text" class="form-control currency" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-lg kt-separator--border-solid"></div>
+                                                <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">DATA PENGHASILAN SETAHUN</span>
+                                                <div class="kt-separator kt-separator--space-sm kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">1. GAJI ATAU UANG PENSIUNAN BERKALA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="gajiPensiun1" name="gajiPensiun1" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">2. TUNJANGAN PPh</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="tunjPph2" name="tunjPph2" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">3. TUNJANGAN LAINNYA, UANG LEMBUR DAN SEGALANYA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="tunjLain3" name="tunjLain3" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">4. HONORARIUM DAN IMBALAN LAIN SEJENISNYA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="honorarium4" name="honorarium4" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">5. PREMI ASURANSI YANG DIBAYARKAN PEMBERI KERJA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="premiAsuransi5" name="premiAsuransi5" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">6. PENERIMAAN DALAM BENTUK NATURA DAN KENIKMATAN LAINNYA YANG DIKENAKAN PEMOTONGAN PPh PASAL 21</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="natura6" name="natura6" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">7. TANTIEM, BONUS, GRATIFIKASI, JASA PRODUKSI DAN THR</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="bonus7" name="bonus7" type="text" class="form-control penghasilan-setahun uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">8. JUMLAH PENGHASILAN BRUTO (1 S.D. 7)</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="jmlBruto8" name="jmlBruto8" type="text" class="form-control jml-penghasilan uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">PENGURANGAN</span>
+                                                <div class="kt-separator kt-separator--space-sm kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">9. BIAYA JABATAN/BIAYA PENSIUN</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="biayaJabatan9" name="biayaJabatan9" type="text" class="form-control pengurang-penghasilan uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">10. IURAN TERKAIT PENSIUN ATAU HARI TUA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="iuranPensiun10" name="iuranPensiun10" type="text" class="form-control pengurang-penghasilan uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">11. ZAKAT/SUMBANGAN KEAGAMAAN YANG BERSIFAT WAJIB YANG DIBAYARKAN MELALUI PEMBERI KERJA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="zakat11" name="zakat11" type="text" class="form-control pengurang-penghasilan uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">12. JUMLAH PENGURANGAN (9 S.D. 11)</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="jmlPengurang12" name="jmlPengurang12" type="text" class="form-control jml-penghasilan uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">PENGHITUNGAN PPh PASAL 21</span>
+                                                <div class="kt-separator kt-separator--space-sm kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">13. JUMLAH PENGHASILAN NETO (8 - 12)</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="jmlNeto13" name="jmlNeto13" type="text" class="form-control penghasilan-neto uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">14. PENGHASILAN NETO MASA PAJAK SEBELUMNYA</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="netoSebelumnya14" name="netoSebelumnya14" type="text" class="form-control penghasilan-neto uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">15. JUMLAH PENGHASILAN NETO UNTUK PERHITUNGAN PPh PASAL 21 (SETAHUN/DISETAHUNKAN)</label>
+                                                        <div class="kt-radio-inline pl-5" data-error-container="#fgDisetahunkan15-error">
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="fgDisetahunkan151" type="radio" name="fgDisetahunkan15" value="0" checked="">
+                                                                Setahun
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="kt-radio kt-radio--bold kt-radio--brand">
+                                                                <input id="fgDisetahunkan152" type="radio" name="fgDisetahunkan15" value="1">
+                                                                Disetahunkan
+                                                                <span></span>
+                                                            </label>
+                                                            <div id="fgDisetahunkan15-error"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="netoSetahunDisetahunkan15" name="netoSetahunDisetahunkan15" type="text" class="form-control jml-pkp uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row" data-select2-id="46">
+                                                    <div class="col-md-9 d-flex align-items-center" data-select2-id="45">
+                                                        <label class="col-form-label px-4">16. PENGHASILAN TIDAK KENA PAJAK (PTKP)</label>
+                                                        <div data-select2-id="44">
+                                                            <div class="form-group select2-container-djp mb-0" style="width: 200px" data-select2-id="43">
+                                                                <select data-placeholder="Pilih PTKP Tahunan" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="ptkpTahunan" name="ptkpTahunan" data-select2-id="ptkpTahunan" tabindex="-1" aria-hidden="true">
+                                                                    <option data-select2-id="12"></option>
+                                                                    <option value="TK/0" data-nominal="54000000" data-select2-id="47">(TK/0) 54000000</option>
+                                                                    <option value="TK/1" data-nominal="58500000" data-select2-id="48">(TK/1) 58500000</option>
+                                                                    <option value="TK/2" data-nominal="63000000" data-select2-id="49">(TK/2) 63000000</option>
+                                                                    <option value="TK/3" data-nominal="67500000" data-select2-id="50">(TK/3) 67500000</option>
+                                                                    <option value="K/0" data-nominal="58500000" data-select2-id="51">(K/0) 58500000</option>
+                                                                    <option value="K/1" data-nominal="63000000" data-select2-id="52">(K/1) 63000000</option>
+                                                                    <option value="K/2" data-nominal="67500000" data-select2-id="53">(K/2) 67500000</option>
+                                                                    <option value="K/3" data-nominal="72000000" data-select2-id="54">(K/3) 72000000</option>
+                                                                </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="11" style="width: 200px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-ptkpTahunan-container"><span class="select2-selection__rendered" id="select2-ptkpTahunan-container" role="textbox" aria-readonly="true" title="(TK/0) 54000000"><span class="select2-selection__clear" data-select2-id="55">×</span>(TK/0) 54000000</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="ptkp16" name="ptkp16" type="text" class="form-control jml-pkp uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">17. PENGHASILAN KENA PAJAK SETAHUN/DISETAHUNKAN (15 - 16)</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pkpSetahun17" name="pkpSetahun17" type="text" class="form-control uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label class="col-form-label pl-4">18. PPh PASAL 21 ATAS PENGHASILAN KENA PAJAK SETAHUN/DISETAHUNKAN</label>
+                                                            <button style="color: #212c5f; font-weight: 700" id="btnHitung21" type="button" class="btn btn-sm btn-warning btn-elevate btn-pill m-2">
+                                                                <i class="fa fa-calculator"></i>&nbsp;Hitung
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21Setahun18" name="pph21Setahun18" type="text" class="form-control pph21-terutang can-null uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label class="col-form-label pl-4">19. PPh PASAL 21 YANG TELAH DIPOTONG MASA PAJAK SEBELUMNYA</label>
+                                                            <button style="color: #212c5f; font-weight: 700" id="btnCek19" type="button" class="btn btn-sm btn-warning btn-elevate btn-pill m-2">
+                                                                <i class="fa fa-cloud-download-alt"></i>&nbsp;Ambil Data
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21Sebelumnya19" name="pph21Sebelumnya19" type="text" class="form-control pph21-terutang prepop can-null uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label class="col-form-label pl-4">20. PPh PASAL 21 DITANGGUNG PEMERINTAH (DTP) YANG TELAH DIPOTONG MASA PAJAK SEBELUMNYA</label>
+                                                            <button style="color: #212c5f; font-weight: 700" id="btnCek20" type="button" class="btn btn-sm btn-warning btn-elevate btn-pill m-2">
+                                                                <i class="fa fa-cloud-download-alt"></i>&nbsp;Ambil Data
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21DtpSebelumnya20" name="pph21DtpSebelumnya20" type="text" class="form-control pph21-terutang prepop can-null uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">21. PPh PASAL 21 TERUTANG (18 - 19 - 20)</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21Terutang21" name="pph21Terutang21" type="text" class="form-control pph21-kblb uang" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">22. PPh PASAL 21 DAN PPh PASAL 26 YANG TELAH DIPOTONG DAN DILUNASI PADA SELAIN MASA PAJAK TERAKHIR</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label class="col-form-label pl-5">22A. PPh PASAL 21 DIPOTONG</label>
+                                                            <button style="color: #212c5f; font-weight: 700" id="btnCek22A" type="button" class="btn btn-sm btn-warning btn-elevate btn-pill m-2">
+                                                                <i class="fa fa-cloud-download-alt"></i>&nbsp;Ambil Data
+                                                            </button>
+                                                        </div>
+                                                        <div class="pl-5">
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Januari</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms01" name="pph21Ms01" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Februari</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms02" name="pph21Ms02" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Maret</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms03" name="pph21Ms03" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">April</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms04" name="pph21Ms04" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Mei</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms05" name="pph21Ms05" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Juni</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms06" name="pph21Ms06" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Juli</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms07" name="pph21Ms07" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Agustus</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms08" name="pph21Ms08" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">September</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms09" name="pph21Ms09" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Oktober</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms10" name="pph21Ms10" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">November</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms11" name="pph21Ms11" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Desember</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21Ms12" name="pph21Ms12" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21SelainMpt22A" name="pph21SelainMpt22A" type="text" class="form-control pph21-kblb prepop can-null uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="d-flex justify-content-between">
+                                                            <label class="col-form-label pl-5">22B. PPh PASAL 21 DITANGGUNG PEMERINTAH (DTP)</label>
+                                                            <button style="color: #212c5f; font-weight: 700" id="btnCek22B" type="button" class="btn btn-sm btn-warning btn-elevate btn-pill m-2">
+                                                                <i class="fa fa-cloud-download-alt"></i>&nbsp;Ambil Data
+                                                            </button>
+                                                        </div>
+                                                        <div class="pl-5">
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Januari</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs01" name="pph21DTPMs01" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Februari</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs02" name="pph21DTPMs02" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Maret</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs03" name="pph21DTPMs03" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">April</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs04" name="pph21DTPMs04" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Mei</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs05" name="pph21DTPMs05" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Juni</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs06" name="pph21DTPMs06" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Juli</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs07" name="pph21DTPMs07" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Agustus</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs08" name="pph21DTPMs08" type="text" class="form-control can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">September</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs09" name="pph21DTPMs09" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Oktober</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs10" name="pph21DTPMs10" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">November</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs11" name="pph21DTPMs11" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2">
+                                                                <div class="col-md-1"></div>
+                                                                <div class="col-md-2">
+                                                                    <label class="col-form-label">Desember</label>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <input id="pph21DTPMs12" name="pph21DTPMs12" type="text" class="form-control prepop can-null uang" autocomplete="off" readonly="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21DtpSelainMpt22B" name="pph21DtpSelainMpt22B" type="text" class="form-control pph21-kblb can-null uang" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-4">23. PPh PASAL 21 KURANG BAYAR/LEBIH BAYAR MASA PAJAK TERAKHIR</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21Mpt23" name="pph21Mpt23" type="text" class="form-control currency" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-5">23A. PPh PASAL 21 DIPOTONG</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph2123A" name="pph2123A" type="text" class="form-control currency" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <label class="col-form-label pl-5">23B. PPh PASAL 21 DITANGGUNG PEMERINTAH (DTP)</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input id="pph21Dtp23B" name="pph21Dtp23B" type="text" class="form-control currency" autocomplete="off" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="kt-separator kt-separator--space-xs kt-separator--border-solid"></div>
+                                            </div>
+                                        </div>
+
+                                        <!--PENANDATANGAN BUKTI PEMOTONGAN-->
+                                        <div id="div-penandatangan">
+                                            <span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--lg kt-badge--rounded" style="margin-top: 15px">PENANDATANGAN BUKTI PEMOTONGAN</span>
+                                            <div class="kt-separator kt-separator--space-lg kt-separator--border-solid"></div>
+                                            <div class="form-group form-group-md row">
+                                                <label class="col-form-label col-md-3 pl-4" for="sbgTtd">Penandatangan Sebagai</label>
+                                                <div class="col-md-4">
+                                                    <div class="form-group select2-container-djp mb-0">
+                                                        <select data-placeholder="Pilih Sebagai" disabled="" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="sbgTtd" name="sbgTtd" data-select2-id="sbgTtd" tabindex="-1" aria-hidden="true">
+                                                            <option></option>
+                                                            <option value="0" selected="" data-select2-id="14">Pengurus</option>
+                                                            <!--<option value="1">Kuasa</option>-->
+                                                        </select><span class="select2 select2-container select2-container--default select2-container--disabled" dir="ltr" data-select2-id="13" style="width: 326.65px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-labelledby="select2-sbgTtd-container"><span class="select2-selection__rendered" id="select2-sbgTtd-container" role="textbox" aria-readonly="true" title="Pengurus"><span class="select2-selection__clear" data-select2-id="15">×</span>Pengurus</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5"></div>
+                                            </div>
+                                            <div class="form-group form-group-md row">
+                                                <label class="col-form-label col-md-3 pl-4" for="penandatangan">Penandatangan
+                                                    Bukti Potong</label>
+                                                <div class="col-md-4">
+                                                    <div class="form-group select2-container-djp mb-0">
+                                                        <select data-placeholder="Pilih Penandatangan" class="form-control m-select2 djp-select2 select2-hidden-accessible" id="penandatangan" name="penandatangan" data-select2-id="penandatangan" tabindex="-1" aria-hidden="true">
+                                                            <option data-select2-id="17"></option>
+                                                            <option value="449532571655000" data-fg="0">FAJAR ARI SUSANTO</option>
+                                                        </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="16" style="width: 326.65px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-penandatangan-container"><span class="select2-selection__rendered" id="select2-penandatangan-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Pilih Penandatangan</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5"></div>
+                                            </div>
+                                        </div>
+                                        <div class="kt-section__content text-left" style="padding: 1rem; border: 2px solid #ffb822; margin-top: 30px">
+                                            <div class="kt-checkbox-list">
+                                                <label class="kt-checkbox kt-checkbox--bold kt-checkbox--brand">
+                                                    <input id="fgSetuju" type="checkbox"> Dengan ini saya menyatakan
+                                                    bahwa Bukti Pemotongan PPh Pasal 21/26 telah saya isi
+                                                    dengan benar dan telah
+                                                    saya tandatangani secara elektronik.
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="kt-align-center">
+                                            <div class="kt-separator kt-separator--space-lg kt-separator--border-solid"></div>
+                                            <button id="btnSubmitBp21Tahunan" type="submit" class="btn btn-djp btn-elevate btn-pill" disabled="">
+                                                <i class="la la-save"></i> Simpan
+                                            </button>
+                                            <button id="btnResetBp21Tahunan" type="button" class="btn btn-secondary btn-elevate btn-pill">
+                                                <i class="fa fa-times"></i> Batal
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
